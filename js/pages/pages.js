@@ -495,12 +495,7 @@ export class HomePage {
         <img src=${meal.thumbSrc} alt=${meal.name} />
         <div>
           <h3>${meal.name} <span class="sr-only">instructions</span></h3>
-          <ol>
-            ${meal.instructions
-              .split(".")
-              .map((step) => (!!step ? `<li>${step}.</li>` : ""))
-              .join("")}
-          </ol>
+          <p>${meal.instructions}</p>
           <p><span>Area:</span> <span class="tag">${meal.area}</span></p>
           <p><span>Category:</span> <span class="tag">${
             meal.category
